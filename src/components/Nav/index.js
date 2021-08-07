@@ -1,17 +1,20 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
+function Nav(props) {
+  const {currentTab, setCurrentTab} = props;
 
-function Nav(props) {   
-
-    return (
-    <div className=" row navigation" id="navigation">
-        <NavLink to="/about">About </NavLink>
-        <NavLink to="/portfolio">Portfolio </NavLink>
-        <NavLink to="/contact">Contact </NavLink>
-        <NavLink to="/resume">Resume</NavLink>
+  return (
+    <div class = 'flex-row'>
+      <nav>
+        <ul className="flex-row">
+        <li className={currentTab === "about" ? "mx-2 navActive" : "mx-2"}>
+					<span onClick={() => setCurrentTab("about")}>About Me</span>
+				</li>
+        <li className={currentTab === "portfolio" ? "mx-2 navActive": "mx-2"}></li>
+        </ul>
+      </nav>
     </div>
-  );
+  )
 }
 
-export default Nav();
+export default Nav;
