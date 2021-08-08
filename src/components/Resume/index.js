@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../App.css";
+import resumeDownload from '../../assets/img/nitinvemuriResume.png'
 
 function Resume() {
     return (
@@ -8,6 +9,11 @@ function Resume() {
                 <h1 className="header" id="resume">
                     Resume
                     </h1>
+            </div>
+            <div>
+                < a download href = {resumeDownload} >
+                    Download Resume
+                </a>
             </div>
             <div>
                 <h4>Proficient at</h4>
