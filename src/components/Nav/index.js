@@ -1,4 +1,5 @@
 import React from 'react';
+import Treeko from '../../assets/img/treeckoIcon.png'
 
 function Nav(props) {
   const {navHeader = [], currentNavHeader, setCurrentNavHeader} = props;
@@ -6,7 +7,7 @@ function Nav(props) {
   return(
     <header>
       <h1>
-        <a href = "/"> Nitin Portfolio</a>
+         <img src= {Treeko} style= {{width: "5%"}} alt = "treeko"/><a href = "/" >Nitin's Portfolio</a>
       </h1>
       <nav> 
         <ul>
