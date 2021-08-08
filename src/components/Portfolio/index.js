@@ -38,6 +38,8 @@ function Portfolio() {
               <li className="padding">
                 <Apps projectApps={projectApps[3]}></Apps>
               </li>
+              </ul>
+              <ul className = "flex-row mobile-row">
               <li className = "padding">
                   <Apps projectApps = {projectApps[4]}></Apps>
               </li>
