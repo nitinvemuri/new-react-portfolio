@@ -1,3 +1,4 @@
+<img width="849" alt="screenshot" src="https://user-images.githubusercontent.com/80983324/128622757-5fef7c17-ab3f-4457-92af-980221388ba4.png">
 # React Challenge: React Portfolio
 
 ## Description
@@ -45,6 +46,7 @@ https://nitinvemuri.github.io/new-react-portfolio/
 
 ## Screenshot
 
+<img width="849" alt="screenshot" src="https://user-images.githubusercontent.com/80983324/128622759-29c794ff-d6b0-4c19-9a54-688ddbcba9ee.png">
 
 ## Contact
 
