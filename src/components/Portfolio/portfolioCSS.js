@@ -17,7 +17,6 @@ function ProjectCSS(props) {
 	return (
 		<Card style={{ width: "18rem" }}>
 			<Card.Img
-				variant="top"
 				src={ image }
 				className="card-image"
                 style = {{width: "150%"}}

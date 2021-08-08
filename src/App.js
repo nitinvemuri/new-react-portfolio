@@ -2,54 +2,55 @@ import React, { useState } from 'react'
 import './App.css';
 import About from './components/About'
 import ContactForm from './components/Contact';
-import Header from './components/Header';
+//import Header from './components/Header';
 import Footer from './components/Footer'
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
+import Nav from './components/Nav'
 
 
 
 function App() {
 
-  const [categories] = useState([
-    { id: 'about'},
-    { id: 'contact'},
-    { id: 'resume'},
-    { id: 'portfolio'}
+  const [navHeader] = useState([
+    { name: 'About', org: "about"},
+    { name: 'Contact', org: 'contact-form'},
+    { name: 'Resume', org: 'resume'},
+    { name: 'Portfolio', org: 'portfolio'}
   ])
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [contactSelected, setContactSelected] = useState(false);
+  const [currentNavHeader, setCurrentNavHeader] = useState(navHeader[0]);
 
-  return (
+  function Display(navHeader) {
+    switch(navHeader) {
+      case "About":
+        return <About></About>
+      case "Contact":
+        return <ContactForm></ContactForm>
+      case "Resume":
+        return <Resume></Resume>
+      case "Portfolio":
+        return <Portfolio></Portfolio>
+      default:
+        return <About></About>;
+    }
+  }
+
+  return(
     <div>
-      <Header
-      categories= {categories}
-      setCurrentCategory = {setCurrentCategory}
-      currentCategory ={currentCategory}
-      contactSelected = {contactSelected}
-      setContactSelected = {setContactSelected}
-      ></Header>
-    <main>
-      <div className = "about">
-      <About></About>
-      </div>
-      <div className = "resume">
-        <Resume></Resume>
-      </div>
-      <div className = "portfolio">
-        <Portfolio></Portfolio>
-      </div>
-      <div className='contact'>
-       <ContactForm></ContactForm>
-      </div>
-      <div className = "footer">
-        <Footer></Footer>
-      </div>
-    </main>
+      <Nav
+      navHeader ={navHeader}
+      setCurrentNavHeader = {setCurrentNavHeader}
+      currentNavHeader = {currentNavHeader}>
+        
+      </Nav>
+      <main>
+        {Display(currentNavHeader.name)}
+      </main>
+      <Footer></Footer>
+      
     </div>
-  );
-  
-}
+  )
 
+}
 export default App;

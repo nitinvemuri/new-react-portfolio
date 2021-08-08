@@ -1,19 +1,30 @@
 import React from 'react';
 
 function Nav(props) {
-  const {currentTab, setCurrentTab} = props;
+  const {navHeader = [], currentNavHeader, setCurrentNavHeader} = props;
 
-  return (
-    <div class = 'flex-row'>
-      <nav>
-        <ul className="flex-row">
-        <li className={currentTab === "about" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentTab("about")}>About Me</span>
-				</li>
-        <li className={currentTab === "portfolio" ? "mx-2 navActive": "mx-2"}></li>
+  return(
+    <header>
+      <h1>
+        <a href = "/"> Nitin Portfolio</a>
+      </h1>
+      <nav> 
+        <ul>
+          {navHeader.map((navHeader) => ( 
+            <li className = {currentNavHeader.name === navHeader.name && 'navActive'} key={navHeader.org}>
+              <a href = {`#${navHeader.org}`}
+                className="coolbtn"
+                onClick={() => setCurrentNavHeader(navHeader)}
+              >
+                {navHeader.name}
+              </a>
+
+            </li>
+          ))}
+          
         </ul>
       </nav>
-    </div>
+    </header>
   )
 }
 

@@ -5,7 +5,7 @@ function Resume() {
     return (
         <section>
             <div className="center">
-                <h1 className="header">
+                <h1 className="header" id="resume">
                     Resume
                     </h1>
             </div>

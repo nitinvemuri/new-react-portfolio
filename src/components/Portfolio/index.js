@@ -1,5 +1,5 @@
 import React from "react";
-import Project from '../Portfolio/portfolioCSS';
+import Apps from '../Portfolio/portfolioCSS';
 import imageBudget from '../../assets/img/IMG_0.png';
 import calendarImage from '../../assets/img/IMG_4.png';
 import passGenImage from '../../assets/img/IMG_1.png';
@@ -16,23 +16,23 @@ function Portfolio() {
     return (
         <section>
           <div className="center">
-            <h1 className="page-header"> Portfolio</h1>
+            <h1 className="page-header" id="portfolio"> Portfolio</h1>
           </div>
           <div>
-            <ul className="flex-row mobile-row">
+            <ul className="flex-row">
               <li className="padding">
-                <Project projectApps={projectApps[0]}></Project>
+                <Apps projectApps={projectApps[0]}></Apps>
               </li>
               <li className="padding">
-                <Project projectApps={projectApps[1]}></Project>
+                <Apps projectApps={projectApps[1]}></Apps>
               </li>
             </ul>
             <ul className="flex-row mobile-row">
               <li className="padding">
-                <Project projectApps={projectApps[2]}></Project>
+                <Apps projectApps={projectApps[2]}></Apps>
               </li>
               <li className="padding">
-                <Project projectApps={projectApps[3]}></Project>
+                <Apps projectApps={projectApps[3]}></Apps>
               </li>
             </ul>
 
